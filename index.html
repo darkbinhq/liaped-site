@@ -85,6 +85,11 @@
             <img src="images/r4vager.png" alt="Person 5">
             <p>Known swatter and cool.</p>
         </div>
+        <div class="person">
+            <p>cracka</p>
+            <img src="images/jimmy.JPG" alt="person">
+            <p>Not known but funny and a cool person.</p>
+        </div>
 	    <div class="person">
             <p>NN</p>
             <img src="images/nn.png" alt="person 6">
@@ -97,8 +102,7 @@
 			const hoaAudio = document.getElementById('hoa-audio');
 
 			function catchHandler() {
-				// Audio playback was blocked.
-				// We will register input listeners to wait until the user has interacted with the page before playing again.
+
 
 				let inputListener;
 				inputListener = function () {
@@ -112,10 +116,8 @@
 			}
 
 			if (hoaAudio.readyState > 1) {
-				// The audio is ready to be played.
 				hoaAudio.play().catch(catchHandler);
 			} else {
-				// The audio cannot be played yet, wait until it is loaded.
 				hoaAudio.addEventListener('canplay', function () {
 					hoaAudio.play().catch(catchHandler);
 				});
